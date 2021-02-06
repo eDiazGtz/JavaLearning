@@ -8,12 +8,12 @@ public class ListOfExceptions {
         myList.add(48);
         myList.add("Goodbye World");
         for(int i = 0; i < myList.size(); i++) {
-            try {
+            try{
                 Integer castedValue = (Integer) myList.get(i);
-            } catch (Exception e) {
-                //TODO: handle exception
-            }
-            System.out.println("Proof that we're going through the loop " + i + " time(s)!");
+                } catch (ClassCastException e) {
+                    System.out.println("ERROR: on item " + i + " with Value: " + myList.get(i) + ". Reason: " + e);
+                }
+            System.out.println("Loop " + i + " time(s)!");
         }
         System.out.println("WE'RE STILL GOING!!!");
     }    

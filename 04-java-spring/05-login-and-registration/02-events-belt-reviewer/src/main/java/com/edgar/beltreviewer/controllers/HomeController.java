@@ -114,8 +114,13 @@ public class HomeController {
 		}
 		if(result.hasErrors()) {
 			Long userId = (Long)session.getAttribute("user_id");
+			User user = this.uService.getOneUser(userId);
+			String userState = user.getState();
+			viewModel.addAttribute("inState", this.eService.findEventsByState(userState));
+			viewModel.addAttribute("notInState", this.eService.findEventsByNotState(userState));
 			viewModel.addAttribute("user_id", userId);
-			return "edit.jsp";
+			viewModel.addAttribute("user", this.uService.getOneUser(userId));
+			return "dashboard.jsp";
 		}
 		eService.saveEvent(newEvent);
 		return "redirect:/dashboard";

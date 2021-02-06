@@ -31,13 +31,15 @@ public class Event {
 	private Long id;
 	@NotBlank
 	private String name;
-	@Future
+	@Future	(message="must be in the future. Must not be blank.")
 	private Date date;
 	@NotBlank
 	private String location;
 	@NotNull
 	private String state;
 	
+	
+	//Relationships
 	@OneToMany(mappedBy="event",fetch=FetchType.LAZY)
 	private List<Message> messages;
 	

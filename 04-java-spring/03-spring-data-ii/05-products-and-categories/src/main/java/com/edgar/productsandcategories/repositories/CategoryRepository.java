@@ -15,7 +15,4 @@ public interface CategoryRepository extends CrudRepository<Category, Long> {
 	//Find List of Categories that do NOT belong to product
 	List<Category> findByProductsNotContaining(Product product);
 	
-	
 }
-
-

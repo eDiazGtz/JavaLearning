@@ -13,7 +13,7 @@
 <div class="container">
 <h1>${person.firstName} ${person.lastName}</h1>
 
-<p>License Number  00000${license.id}</p>
+<p>License Number:  00000${license.id}</p>
 <p>State:  ${license.state}</p>
 <p>Expiration Date:  ${license.expiration_date}</p>
 

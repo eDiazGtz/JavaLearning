@@ -1,9 +1,8 @@
 
-public class Calculator implements java.io.Serializable {
+public class Calculator  {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
 	//attributes 
 	private int operandOne;
 	private int operandTwo;
@@ -29,6 +28,7 @@ public class Calculator implements java.io.Serializable {
 		} else {
 			System.out.println("Not a correct Operation, must be + or -.");
 			return -1;
+			
 		}
 	}
 	public void getResults() {

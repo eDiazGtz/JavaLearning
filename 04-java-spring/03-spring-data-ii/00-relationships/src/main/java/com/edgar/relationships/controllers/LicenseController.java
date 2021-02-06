@@ -15,7 +15,7 @@ import com.edgar.relationships.models.License;
 import com.edgar.relationships.services.LicenseService;
 import com.edgar.relationships.services.PersonService;
 
-@Controller
+@Controller 
 @RequestMapping("/licenses")
 public class LicenseController {
 	

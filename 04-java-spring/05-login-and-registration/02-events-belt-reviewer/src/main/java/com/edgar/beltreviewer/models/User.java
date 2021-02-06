@@ -51,6 +51,7 @@ public class User {
 
 	@OneToMany(mappedBy="host",fetch=FetchType.LAZY)
 	private List<Event> events;
+	
 	@ManyToMany(fetch=FetchType.LAZY)
 	@JoinTable(
 			name="users_events",
